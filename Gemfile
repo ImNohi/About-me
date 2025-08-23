@@ -33,4 +33,4 @@ gem "wdm", "~> 0.1", :platforms => [:windows]
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 gem "fiddle", "~> 1.1.6"
-gem "faraday-retry", "~> 2.3.2"
+# gem "faraday-retry", "~> 2.3.2"
