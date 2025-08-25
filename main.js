@@ -1,22 +1,32 @@
-function updateTime() {
-    const now = new Date();
+function main() {
+    const yourTimeDisplay = document.getElementById("your-time");
+    const myTimeDisplay = document.getElementById("my-time");
 
-    const timeDisplay = document.getElementById("current-time");
+    const timeOptions = {
+        month: "short",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+    };
 
-    if (timeDisplay) {
-        const options = {
-            hour: "numeric",
-            minute: "2-digit",
-            second: "2-digit",
-            hour12: false,
-        };
-        const formattedTime = now.toLocaleTimeString(undefined, options);
+    const yourTimeFormatter = new Intl.DateTimeFormat("en-US", timeOptions);
+    const myTimeFormatter = new Intl.DateTimeFormat("en-US", {...timeOptions, timeZone: "Europe/Moscow"});
 
-        timeDisplay.innerHTML = formattedTime;
-    } else {
-        console.error("Error: The element with ID 'current-time' was not found.");
-    }
+    updateTime(yourTimeFormatter, myTimeFormatter, yourTimeDisplay, myTimeDisplay);
+    setInterval(updateTime, 1000, yourTimeFormatter, myTimeFormatter, yourTimeDisplay, myTimeDisplay);
 }
 
-updateTime();
-setInterval(updateTime, 1000);
+function updateTime(localTimeFormatter, myTimeFormatter, yourTimeDisplay, myTimeDisplay) {
+    const now = new Date();
+
+    const yourTime = localTimeFormatter.format(now);
+    const myTime = myTimeFormatter.format(now)
+
+    yourTimeDisplay.textContent = `Your ${yourTime}`;
+    myTimeDisplay.textContent = `Is my ${myTime}`;
+}
+
+
+main()
