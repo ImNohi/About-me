@@ -1,5 +1,59 @@
-div {
-    border: solid 2px;
+body {
+    background-color: #1b1b1b;
+    color: #F4FDFF;
+    position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #FD2A59;
+  width: 1px;
+}
+
+body::before {
+    left: 6vw;
+    box-shadow: -2px 0 8px 2px #FD2A59;
+}
+
+body::after {
+    right: 6vw;
+    box-shadow: 2px 0 8px 2px #FD2A59;
+}
+
+a {
+    text-decoration: none;
+    color: #FD2A59;
+}
+
+div#current-time {
     text-align: right;
-    padding-right: 15vw;
+    margin: 0 15vw -10vh 0;
+}
+
+div#overview {
+    display: flex;
+    margin: 0 10vw 0 10vw;
+    /* border-width: 0 1px;
+    border-style: solid;
+    border-color: #FFF3F3; */
+}
+
+div#welcome-text {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.inverted {
+  filter:invert(100%)
 }
