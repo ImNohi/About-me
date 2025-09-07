@@ -1,51 +1,80 @@
-body {
-    background-color: #1b1b1b;
-    color: #F4FDFF;
-    position: relative;
-}
+:root {
+    --ff: Verdana;
+    --h1: bold 1.8rem/1em var(--ff);
+    --h2: bold 1.4rem/1.2em var(--ff);
+    --h3: bold 1rem/1.2em var(--ff);
+    --p: 0.9rem/1.6em var(--ff);
 
-body::before,
-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  background-color: #FD2A59;
-  width: 1px;
-}
+    --main-black: #1B1B1B;
+    --main-white: #F4FDFF;
+    --accent-red: #FD2A59;
 
-body::before {
-    left: 6vw;
-    box-shadow: -2px 0 8px 2px #FD2A59;
-}
-
-body::after {
-    right: 6vw;
-    box-shadow: 2px 0 8px 2px #FD2A59;
+    --main-white-dimmed: #7a7e7e;
 }
 
 a {
     text-decoration: none;
-    color: #FD2A59;
+    color: var(--accent-red);
 }
 
-div#current-time {
-    text-align: right;
-    margin: 0 15vw -10vh 0;
+body {
+    font-family: var(--ff);
+    background-color: var(--main-black);
+    color: var(--main-white);
+    position: relative;
 }
 
-div#overview {
+h1{font: var(--h1);}
+h2{font: var(--h2);}
+h3{font: var(--h3);}
+p{font: var(--p); margin: 0;}
+
+
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--accent-red);
+    width: 1px;
+}
+
+body::before {
+    left: 6vw;
+    box-shadow: -2px 0 8px 2px var(--accent-red);
+}
+
+body::after {
+    right: 6vw;
+    box-shadow: 2px 0 8px 2px var(--accent-red);
+}
+
+
+body > div {
+    margin: 0 10vw 5vw 10vw;
+}
+
+.big-grid-elem {
+    height: 450px;
+    grid-column: 2;
+	grid-row: 1 / 3;
+}
+
+.dimmed-text {color: var(--main-white-dimmed);}
+
+.game-icon {
+    width: 200px;
+    margin: 20px;
+}
+
+.game-icon-and-stats {
     display: flex;
-    margin: 0 10vw 0 10vw;
-    /* border-width: 0 1px;
-    border-style: solid;
-    border-color: #FFF3F3; */
-}
-
-div#welcome-text {
-    display: flex;
-    align-items: left;
     flex-direction: column;
+}
+
+.inverted {
+    filter: invert(100%)
 }
 
 .social-link {
@@ -54,6 +83,36 @@ div#welcome-text {
     gap: 8px;
 }
 
-.inverted {
-  filter:invert(100%)
+.social-links {
+    margin-top: 4px;
+    padding-left: 12px;
+}
+
+div#current-time {
+    text-align: right;
+    margin: 0 10vw -6vh 0;
+}
+
+div#overview {
+    display: flex;
+}
+
+div#welcome-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div#celeste, div#osu {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+    width: 1000px;
+	height: 600px;
+	padding: 10px;
+	border: 2px solid #696989;
+}
+
+#celeste > div, #osu > div {
+	padding: 10px;
+	border: 1px solid #696989;
 }
