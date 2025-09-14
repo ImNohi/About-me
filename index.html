@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" href="assets/favicon.ico">
+
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="css-normalize.css">
 
@@ -15,13 +17,12 @@
 
 <body>
     <div id="current-time">
-        <h1><span class="dimmed-text">Your</span> <span id="your-time">HH:MM</span></h1>
-        <h2><span class="dimmed-text">Is my</span> <span id="my-time">HH:MM</span></h2>
+        <h1><span class="dimmed-text">Your</span> <span id="your-time">??:??:??</span></h1>
+        <h2><span class="dimmed-text">Is my</span> <span id="my-time">??:??:??</span></h2>
     </div>
-
-    <div id="overview">
-        <img src="assets/Umbrella.png" alt="Nohi's profile picture" width="24%">
-        <div id="welcome-text">
+    <div class="section-wrapper">
+        <div class="section" id="overview">
+            <img src="assets/Umbrella.png" alt="Nohi's profile picture" id="pfp">
             <div>
                 <h2>Hello, I'm Nohi.</h2>
                 <p>''I'' is pronounced like in a word ''hint''. I'm just a guy on the internet and here are some links
@@ -30,70 +31,60 @@
 
             <div>
                 <span>Find me on:</span>
-                <ul class="social-links">
-                    <li>
-                        <div class="social-link">
-                            <img src="assets/discord-icon.svg" alt="discord-icon" width="24vw" height="24vh">
-                            <a href="https://discord.com/users/683617156914872331" target="_blank">
-                                Discord
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="social-link">
-                            <img src="assets/steam-icon.svg" alt="steam-icon" class="inverted" width="24vw" ,
-                                height="24vh">
-                            <a href="https://steamcommunity.com/profiles/76561198154001940/" target="_blank">
-                                Steam
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="celeste">
-        <div class=".game-icon-and-stats">
-            <div class="game-icon"><img src="assets/celeste-icon.png" alt="celeste-icon" width="300px"></div>
-            <div class="game-stats">
-                Play time: <span id="celeste-play-time">700+ h</span>
+                <div class="social-link">
+                    <img src="assets/discord-icon.svg" alt="discord-icon" width="24vw" height="24vh">
+                    <a href="https://discord.com/users/683617156914872331" target="_blank">
+                        Discord
+                    </a>
+                </div>
+                <div class="social-link">
+                    <img src="assets/steam-icon.svg" alt="steam-icon" class="inverted" width="24vw" ,
+                        height="24vh">
+                    <a href="https://steamcommunity.com/profiles/76561198154001940/" target="_blank">
+                        Steam
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div><img src="assets/celeste-hardest-preview.png" alt="G.D.D.I." width="600px"></div>
-        <div class="best-achievement-stats">
-            Hardest clear:
-            <ul>
-                <li>20k deaths</li>
-                <li>15 hours</li>
-            </ul>
-        </div>
-        <div class="best-achievement-link">
-            <a href="https://gamebanana.com/mods/527067">G.D.D.I. by money</a>
-        </div>
-
-    </div>
-
-    <div id="osu">
-        <div class=".game-icon-and-stats">
-            <div class="game-icon"><img src="assets/osu-icon.svg" alt="osu-icon" width="300px"></div>
-            <div class="game-stats">
-                Rank: <span id="osu-rank">~ #54,000</span><br>
-                Play time: <span id="osu-play-time">700+ h</span>
+        <div class="section game-stats">
+            <div class="game-icon-and-stats">
+                <div class="game-icon"><img src="assets/celeste-icon.png" alt="celeste-icon"></div>
+                <div class="game-stats">
+                    Play time: <span id="celeste-play-time">???h</span>
+                </div>
             </div>
-        </div>
-        <div><img src="assets/osu-hardest-preview.jpg" alt="Libertas" width="600px"></div>
-        <div class="best-achievement-stats">
-            Best score:
-            <ul>
-                <li>Some info idk</li>
-            </ul>
-        </div>
-        <div class="best-achievement-link">
-            <a href="https://osu.ppy.sh/scores/5416906696">wasting my time by Froslass</a>
+
+            <img src="assets/celeste-hardest-preview.png" alt="G.D.D.I." class="hardest-preview" id="celeste-hardest">
+            <div class="hardest-stats">
+                Hardest clear:
+                <!-- 20k deaths
+                15 hours -->
+            </div>
+            <div class="hardest-link">
+                <a href="https://gamebanana.com/mods/527067">G.D.D.I. by money</a>
+            </div>
+
         </div>
 
+        <div class="section game-stats">
+            <div class="game-icon-and-stats">
+                <div class="game-icon"><img src="assets/osu-icon.svg" alt="osu-icon"></div>
+                <div class="game-stats">
+                    Rank: <span id="osu-rank">#??,???</span><br>
+                    Play time: <span id="osu-play-time">???h</span>
+                </div>
+            </div>
+            <img src="assets/osu-hardest-preview.jpg" alt="Libertas" class="hardest-preview" id="osu-hardest">
+            <div class="hardest-stats">
+                Best score:
+                <!-- Some info idk -->
+            </div>
+            <div class="hardest-link">
+                <a href="https://osu.ppy.sh/scores/5416906696">wasting my time by Froslass</a>
+            </div>
+
+        </div>
     </div>
 </body>
 
