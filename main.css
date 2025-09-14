@@ -97,20 +97,24 @@ body::after {
     display: flex;
     margin-block: 8px;
     padding-left: 16px;
+}
+
+.social-link-content {
+    display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.social-link::before {
+.social-link-content::before {
     content: "\00a0";
     font-size: 1.15em;
 }
 
-.social-link > a {
+.social-link-content > a {
     transition: all  0.5s ease 0s;
 }
 
-.social-link > img {
+.social-link-content > img {
     transition: all  0.5s ease 0s;
 }
 
@@ -134,11 +138,11 @@ body::after {
     z-index: -1;
 }
 
-.social-link:hover img {
+.social-link-content:hover img {
     scale: 1.15;
 }
 
-.social-link:hover a {
+.social-link-content:hover a {
     font-size: 1.15em;
 }
 
