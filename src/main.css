@@ -154,6 +154,10 @@ body::after {
 	border: 2px solid var(--accent-red);
 }
 
+#celeste-hardest {
+    object-position: center;
+}
+
 #osu-hardest {
     object-position: top;
 }
