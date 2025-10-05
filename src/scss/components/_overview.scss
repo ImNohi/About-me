@@ -1,0 +1,16 @@
+#overview {
+    display: grid;
+
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+#pfp {
+    grid-row: 1 / 3;
+}
+
+#welcome-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

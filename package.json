@@ -1,0 +1,42 @@
+{
+  "name": "about-me",
+  "version": "1.0.0",
+  "description": "Single page website that has info about me.",
+  "main": "index.html",
+  "scripts": {
+    "prestart": "npm run clean && npm run build:initial",
+    "start": "concurrently \"npm run watch:copy:files\" \"npm run watch:sass\" \"npm run watch:ts\" \"npm run serve\"",
+
+    "build:initial": "npm run copy:files && npm run build:sass:dev && npm run build:ts",
+    "build": "npm run clean && npm run copy:files && npm run build:sass:prod && npm run build:ts",
+
+    "clean": "rimraf dist",
+
+    "copy:files": "rimraf dist/assets && node copy-assets.js",
+    "watch:copy:files": "concurrently --kill-others \"chokidar index.html assets/**/* -c \\\"npm run copy:files\\\"\"",
+
+    "watch:ts": "tsc --watch",
+    "build:ts": "tsc",
+
+    "watch:sass": "sass --watch src/scss/style.scss:dist/style.css",
+    "build:sass:dev": "sass src/scss/style.scss:dist/style.css",
+    "build:sass:prod": "sass src/scss/style.scss:dist/style.css --style=compressed",
+
+    "serve": "browser-sync start --server dist --files 'index.html, dist/style.css, dist/index.js, dist/assets/**/*'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-nohi:ImNohi/About-me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.1",
+    "rimraf": "^6.0.1",
+    "sass": "^1.93.2",
+    "typescript": "^5.9.3"
+  }
+}

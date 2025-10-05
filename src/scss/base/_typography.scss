@@ -1,0 +1,25 @@
+@use '../variables' as *;
+
+h1 {
+    font: $h1;
+}
+
+h2 {
+    font: $h2;
+}
+
+h3 {
+    font: $h3;
+}
+
+p {
+    font: $p;
+
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+    color: $accent-red;
+}

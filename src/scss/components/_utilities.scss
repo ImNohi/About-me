@@ -1,0 +1,9 @@
+@use '../variables' as *;
+
+.dimmed-text {
+    color: $main-white-dimmed;
+}
+
+.inverted {
+    filter: invert(100%);
+}

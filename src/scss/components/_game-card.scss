@@ -1,0 +1,88 @@
+@use '../variables' as *;
+
+.game-icon {
+    width: 150px;
+    margin: 20px;
+}
+
+.game-icon-and-stats {
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+}
+
+.game-stats {
+    padding-left: 8px;
+}
+
+.hardest-link {
+    position: relative;
+    bottom: 50px;
+    z-index: 1;
+    grid-area: 1 / 2 / span 1 / span 1;
+    place-self: end end;
+}
+
+.hardest-preview {
+    width: 700px;
+    height: 230px;
+    grid-area: 1 / 2 / span 1 / span 1;
+    place-self: start center;
+    object-fit: cover;
+}
+
+.hardest-stats {
+    padding-left: 8px;
+}
+
+.input-method {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.hardest-link > a {
+
+    padding-right: 12px;
+
+    color: aqua;
+    font: $h1;
+    background-color: $contrast-black;
+}
+
+.hardest-link::before {
+    position: absolute;
+    top: -4px;
+    bottom: 0;
+    left: -12px;
+    z-index: -1;
+
+    width: 50px;
+
+    background-color: $contrast-black;
+    transform: skewX(-15deg);
+
+    content: "";
+}
+
+.section.game-card {
+    display: grid;
+
+    width: 880px;
+    height: 340px;
+
+    grid-template-columns: 1fr 4fr;
+    background-color: $contrast-black;
+
+    border: 2px solid $accent-red;
+    box-shadow: 0px 12px 12px 4px rgba(0, 0, 0, 0.4);
+}
+
+#celeste-hardest {
+    object-position: center;
+}
+
+#osu-hardest {
+    object-position: top;
+}

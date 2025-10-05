@@ -7,22 +7,23 @@
 
     <link rel="icon" href="assets/favicon.ico">
 
-    <link rel="stylesheet" href="./dist/main.css">
-    <link rel="stylesheet" href="./dist/css-normalize.css">
+    <link rel="stylesheet" href="./style.css">
 
-    <script src="./dist/index.js" defer></script>
+    <script src="./index.js" defer></script>
 
     <title>Hi, I'm Nohi</title>
 </head>
 
 <body>
-    <div id="current-time">
-        <h1><span class="dimmed-text">Your</span> <span id="your-time">??:??:??</span></h1>
-        <h2><span class="dimmed-text">Is my</span> <span id="my-time">??:??:??</span></h2>
+    <div id="time-display">
+        <div id="current-time">
+            <h1><span class="dimmed-text">Your</span> <span id="your-time">??:??:??</span></h1>
+            <h2><span class="dimmed-text">Is my</span> <span id="my-time">??:??:??</span></h2>
+        </div>
     </div>
     <div class="section-wrapper">
         <div class="section" id="overview">
-            <img src="assets/Umbrella.png" alt="Nohi's profile picture" id="pfp">
+            <img src="./assets/Umbrella.png" alt="Nohi's profile picture" id="pfp">
             <div>
                 <h2>Hello, I'm Nohi.</h2>
                 <p>''I'' is pronounced like in a word ''hint''. I'm just a guy on the internet and here are some links
@@ -33,7 +34,7 @@
                 <span>Find me on:</span>
                 <div class="social-link">
                     <div class="social-link-content">
-                        <img src="assets/discord-icon.svg" alt="discord-icon" width="24vw" height="24vh">
+                        <img src="./assets/discord-icon.svg" alt="discord-icon" width="24vw" height="24vh">
                         <a href="https://discord.com/users/683617156914872331" target="_blank">
                             Discord
                         </a>
@@ -41,7 +42,7 @@
                 </div>
                 <div class="social-link">
                     <div class="social-link-content">
-                        <img src="assets/steam-icon.svg" alt="steam-icon" class="inverted" width="24vw" ,
+                        <img src="./assets/steam-icon.svg" alt="steam-icon" class="inverted" width="24vw" ,
                             height="24vh">
                         <a href="https://steamcommunity.com/profiles/76561198154001940/" target="_blank">
                             Steam
@@ -51,15 +52,22 @@
             </div>
         </div>
 
-        <div class="section game-stats">
+        <div class="section game-card">
             <div class="game-icon-and-stats">
-                <div class="game-icon"><img src="assets/celeste-icon.png" alt="celeste-icon"></div>
+                <div class="game-icon"><img src="./assets/celeste-icon.png" alt="celeste-icon"></div>
                 <div class="game-stats">
                     Play time: <span id="celeste-play-time">???h</span>
+                    <div class="input-method">Input method:
+                        <div class="tooltip-container">
+                            <img src="./assets/controller.svg" alt="controller" class="inverted" width="24vw"
+                                height="24vh">
+                            <span class="tooltip-text">Controller</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <img src="assets/celeste-hardest-preview.png" alt="G.D.D.I." class="hardest-preview" id="celeste-hardest">
+            <img src="./assets/celeste-hardest-preview.png" alt="G.D.D.I." class="hardest-preview" id="celeste-hardest">
             <div class="hardest-stats">
                 Hardest clear:
                 <!-- 20k deaths
@@ -71,15 +79,25 @@
 
         </div>
 
-        <div class="section game-stats">
+        <div class="section game-card">
             <div class="game-icon-and-stats">
-                <div class="game-icon"><img src="assets/osu-icon.svg" alt="osu-icon"></div>
+                <div class="game-icon"><img src="./assets/osu-icon.svg" alt="osu-icon"></div>
                 <div class="game-stats">
                     Rank: <span id="osu-rank">#??,???</span><br>
                     Play time: <span id="osu-play-time">???h</span>
+                    <div class="input-method">Input method:
+                        <div class="tooltip-container">
+                            <img src="./assets/keyboard.svg" alt="keyboard" class="inverted" width="24vw"
+                                height="24vh">
+                            <img src="./assets/pencil.svg" alt="pencil" class="inverted" width="20vw"
+                                height="20vh">
+                            <span class="tooltip-text">Tablet & Keyboard</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <img src="assets/osu-hardest-preview.jpg" alt="Libertas" class="hardest-preview" id="osu-hardest">
+            <img src="./assets/osu-hardest-preview.jpg" alt="Libertas" class="hardest-preview" id="osu-hardest">
             <div class="hardest-stats">
                 Best score:
                 <!-- Some info idk -->
