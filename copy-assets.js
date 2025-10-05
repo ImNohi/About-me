@@ -7,7 +7,7 @@ if (!fs.existsSync(destDir)){
     fs.mkdirSync(destDir, { recursive: true });
 }
 
-fs.cpSync('index.html', 'dist/index.html');
+fs.cpSync('src/index.html', 'dist/index.html');
 console.log('Copied index.html to dist/');
 
 if (fs.existsSync(srcDir)) {

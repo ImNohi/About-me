@@ -13,7 +13,7 @@
     "clean": "rimraf dist",
 
     "copy:files": "rimraf dist/assets && node copy-assets.js",
-    "watch:copy:files": "concurrently --kill-others \"chokidar index.html assets/**/* -c \\\"npm run copy:files\\\"\"",
+    "watch:copy:files": "concurrently --kill-others \"chokidar src/index.html assets/**/* -c \\\"npm run copy:files\\\"\"",
 
     "watch:ts": "tsc --watch",
     "build:ts": "tsc",
@@ -22,7 +22,7 @@
     "build:sass:dev": "sass src/scss/style.scss:dist/style.css",
     "build:sass:prod": "sass src/scss/style.scss:dist/style.css --style=compressed",
 
-    "serve": "browser-sync start --server dist --files 'index.html, dist/style.css, dist/index.js, dist/assets/**/*'"
+    "serve": "browser-sync start --server dist --files 'index.html, style.css, index.js, assets/**/*'"
   },
   "repository": {
     "type": "git",
